@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 45 100% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 45 100% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 45 100% 15%;
+    --primary: 32 95% 44%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 100% 96%;
+    --secondary-foreground: 45 100% 15%;
+    --muted: 45 100% 96%;
+    --muted-foreground: 45 30% 46%;
+    --accent: 45 100% 96%;
+    --accent-foreground: 45 100% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 45 60% 85%;
+    --input: 45 60% 85%;
+    --ring: 32 95% 44%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: "Inter", sans-serif;
+  }
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .task-delete-enter {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    max-height: 200px;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .task-delete-exit {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.95);
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+  }
+}
